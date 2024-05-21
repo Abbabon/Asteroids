@@ -46,8 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         if (RotatingLeft)
         {
-            _desiredRotation = _transform.rotation.eulerAngles +
-                                  _shipRotationSpeed * Time.deltaTime * transform.forward;
+            transform.Rotate(_shipRotationSpeed * Time.deltaTime * transform.forward);
         }
         else if (RotatingRight)
         {
